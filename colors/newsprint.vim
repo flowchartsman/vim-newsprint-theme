@@ -22,7 +22,7 @@ hi Conditional  guifg=#878787          guibg=NONE      gui=bold
 hi Todo         guifg=#A42E2E          guibg=#FFDDDD   gui=underline
 hi Comment      guifg=#888888          guibg=NONE      gui=NONE
 hi PmenuSel     guifg=#FFFFFF          guibg=#565655   gui=bold
-hi Special      guifg=#797A7A          guibg=NONE      gui=NONE
+hi Special      guifg=#CCA3A3          guibg=NONE      gui=NONE
 hi Identifier   guifg=#111111          guibg=NONE      gui=bold
 hi Keyword      guifg=#999999          guibg=NONE      gui=bold
 hi PreProc      guifg=#949494          guibg=NONE      gui=bold
@@ -59,7 +59,8 @@ hi PmenuSbar    guifg=fg               guibg=#A2A2A2   gui=NONE
 hi PmenuThumb   guifg=fg               guibg=#888888   gui=NONE
 
 hi Question     guifg=#BABABA          guibg=bg        gui=bold
-hi SignColumn   guifg=#000000          guibg=#E7E7E7   gui=NONE
+hi SignColumn   guifg=#000000          guibg=#EEEEEE   gui=NONE
+"hi SignColumn   guifg=#000000          guibg=#E7E7E7   gui=NONE
 
 hi SpecialKey   guifg=#BABABA          guibg=#FFFFFF   gui=NONE
 
@@ -91,85 +92,21 @@ hi qfFileName       guifg=#959595      guibg=NONE      gui=italic
 hi qfLineNr         guifg=fg           guibg=NONE      gui=NONE
 hi qfError          guifg=fg           guibg=#FFFFFF   gui=undercurl
 
-" 256-color Terminal support
-if &t_Co > 255
-   hi  Normal             ctermfg=251        ctermbg=0          cterm=NONE
-   hi  CursorLine         ctermfg=NONE       ctermbg=240        cterm=NONE
-   hi  CursorColumn       ctermfg=NONE       ctermbg=234        cterm=NONE
-   hi  LineNr             ctermfg=240        ctermbg=NONE       cterm=NONE
-   hi  Statement          ctermfg=248        ctermbg=NONE       cterm=bold
-   hi  Function           ctermfg=255        ctermbg=NONE       cterm=bold
-   hi  String             ctermfg=244        ctermbg=NONE       cterm=NONE
-   hi  Type               ctermfg=255        ctermbg=NONE       cterm=bold
-   hi  Conditional        ctermfg=243        ctermbg=NONE       cterm=bold
-   hi  Todo               ctermfg=9          ctermbg=NONE       cterm=underline
-   hi  Comment            ctermfg=243        ctermbg=NONE       cterm=NONE
-   hi  PmenuSel           ctermfg=0          ctermbg=248        cterm=bold
-   hi  Special            ctermfg=244        ctermbg=NONE       cterm=NONE
-   hi  Identifier         ctermfg=15         ctermbg=NONE       cterm=bold
-   hi  Keyword            ctermfg=242        ctermbg=NONE       cterm=bold
-   hi  PreProc            ctermfg=242        ctermbg=NONE       cterm=bold
-   hi  Include            ctermfg=254        ctermbg=NONE       cterm=NONE
-   hi  Constant           ctermfg=244        ctermbg=235        cterm=bold
-   hi  Delimiter          ctermfg=244        ctermbg=NONE       cterm=NONE
-
-   hi  Visual             ctermfg=15         ctermbg=239        cterm=NONE
-   hi  ColorColumn        ctermfg=NONE       ctermbg=234
-   hi  Cursor             ctermfg=bg         ctermbg=fg         cterm=NONE
-   hi  CursorIM           ctermfg=bg         ctermbg=fg         cterm=NONE
-   hi  lCursor            ctermfg=bg         ctermbg=fg         cterm=NONE
-
-   hi  DiffAdd            ctermfg=40         ctermbg=22         cterm=NONE
-   hi  DiffChange         ctermfg=209        ctermbg=52         cterm=NONE
-   hi  DiffDelete         ctermfg=9          ctermbg=52         cterm=NONE
-   hi  DiffText           ctermfg=9          ctermbg=52         cterm=NONE
-
-   hi  Directory          ctermfg=246        ctermbg=bg         cterm=NONE
-   hi  ErrorMsg           ctermfg=242        ctermbg=NONE       cterm=NONE
-   hi  FoldColumn         ctermfg=240        ctermbg=237        cterm=bold
-   hi  Folded             ctermfg=244        ctermbg=234        cterm=italic
-
-   hi  IncSearch          ctermfg=0          ctermbg=248        cterm=NONE
-   hi  Search             ctermfg=0          ctermbg=251        cterm=NONE
-   hi  MatchParen         ctermfg=0          ctermbg=248        cterm=bold
-   hi  ModeMsg            ctermfg=15         ctermbg=243        cterm=bold
-   hi  MoreMsg            ctermfg=243        ctermbg=bg         cterm=bold
-   hi  NonText            ctermfg=244        ctermbg=bg         cterm=bold
-
-   hi  Pmenu              ctermfg=242        ctermbg=237        cterm=NONE
-   hi  PmenuSbar          ctermfg=fg         ctermbg=241        cterm=NONE
-   hi  PmenuThumb         ctermfg=fg         ctermbg=243        cterm=NONE
-
-   hi  Question           ctermfg=238        ctermbg=bg         cterm=bold
-   hi  SignColumn         ctermfg=15         ctermbg=233        cterm=NONE
-
-   hi  SpecialKey         ctermfg=238        ctermbg=bg         cterm=NONE
-
-   hi  SpellBad           ctermbg=0          cterm=NONE
-   hi  SpellCap           ctermbg=0          cterm=NONE
-   hi  SpellLocal         ctermbg=0          cterm=NONE
-   hi  SpellRare          ctermbg=0          cterm=NONE
-   hi  StatusLine         ctermfg=0          ctermbg=243        cterm=bold
-   hi  StatusLineNC       ctermfg=241        ctermbg=235        cterm=NONE
-   hi  TabLine            ctermfg=fg         ctermbg=243        cterm=underline
-   hi  TabLineFill        ctermfg=fg         ctermbg=bg         cterm=reverse
-   hi  TabLineSel         ctermfg=fg         ctermbg=bg         cterm=bold
-   hi  Title              ctermfg=242        ctermbg=bg         cterm=bold
-   hi  VertSplit          ctermfg=234        ctermbg=234
-   hi  WarningMsg         ctermfg=252        ctermbg=240        cterm=NONE
-   hi  WildMenu           ctermfg=0          ctermbg=244        cterm=NONE
-   hi  Boolean            ctermfg=241        ctermbg=NONE       cterm=bold
-   hi  Ignore             ctermfg=bg         ctermbg=NONE       cterm=NONE
-   hi  Error              ctermfg=210        ctermbg=NONE       cterm=underline
-
-   hi  VimError           ctermfg=250        ctermbg=236        cterm=bold
-   hi  VimCommentTitle    ctermfg=244        ctermbg=236        cterm=bold
-   hi  qfFileName         ctermfg=242        ctermbg=NONE       cterm=NONE
-   hi  qfLineNr           ctermfg=fg         ctermbg=NONE       cterm=NONE
-   hi  qfError            ctermfg=fg         ctermbg=0          cterm=underline
-
-   " Taglist
-   hi MyTagListFileName   ctermfg=15         ctermbg=238
-   hi MyTagListTitle      ctermfg=241        ctermbg=bg         cterm=bold
-end
-
+" -----------------------------------------------------------------------------
+" Gutter/Error column
+"
+" Colors
+hi GutterError guifg=#CC7474 guibg=#EEEEEE gui=NONE
+hi GutterWarn guifg=#CCC974 guibg=#EEEEEE gui=NONE
+hi GutterInfo guifg=#748BCC guibg=#EEEEEE gui=NONE
+hi GutterGood guifg=#77cc74 guibg=#EEEEEE gui=NONE
+" ALE
+hi link ALEErrorSign GutterError
+hi link ALEWarningSign GutterWarn
+hi link ALEInfoSign GutterInfo
+" Signify
+hi link SignifySignAdd             GutterGood
+hi link SignifySignChange          GutterWarn
+hi link SignifySignDelete          GutterError
+hi link SignifySignChangeDelete    GutterWarn
+hi link SignifySignDeleteFirstLine GutterError
